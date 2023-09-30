@@ -6,7 +6,7 @@ import ExpenseChart from "./ExpenseChart";
 import { useState } from "react";
 
 export default function ExpenseItemList(props) {
-  const [selectedYear, setSelectedYear] = useState(2022);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   
   const expenses = props.items.filter((expense) => {
     const expenseYear = expense.date.getFullYear();
